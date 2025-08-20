@@ -1,20 +1,47 @@
 # Thedispatch
 
-This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:
+This is an [Observable Framework](https://observablehq.com/framework/) app.
 
-```
-npm install
-```
+## Installation and development
 
-Then, to start the local preview server, run:
+1. **Install Node.js 18 or newer.** The project specifies the runtime in
+   `package.json` and requires a modern Node environment.
+2. **Install dependencies.** Run the following command in the project root to
+   download all packages defined in `package.json`:
 
-```
-npm run dev
-```
+   ```bash
+   npm install
+   ```
 
-Then visit <http://localhost:3000> to preview your app.
+3. **Start the development server.** Observable's preview server provides hot
+   reloading for pages under `src/`. Launch it with:
 
-For more, see <https://observablehq.com/framework/getting-started>.
+   ```bash
+   npm run dev
+   ```
+
+   The site will be available at <http://localhost:3000>.
+
+For additional tips, see the [Observable Framework getting started
+guide](https://observablehq.com/framework/getting-started).
+
+## Data and visualization stack
+
+This project combines three key libraries:
+
+* **[DuckDB-WASM](https://github.com/duckdb/duckdb-wasm)** runs the
+  [DuckDB](https://duckdb.org/) analytical database in the browser. The helper
+  module in [`src/db.js`](./src/db.js) loads sample CSV data into an in-memory
+  database and exposes a `query` function for executing SQL.
+* **[Mosaic](https://uwdata.github.io/mosaic/)** provides a tiled layout and
+  reactive dataflow for building dashboards. `MosaicClient` is imported from
+  `@uwdata/vgplot` and lets Observable pages arrange interactive views.
+* **[vgplot](https://github.com/uwdata/vgplot)** renders charts. After DuckDB
+  returns query results, they are passed to `vgplot` mark functions (such as
+  `vg.barY`) to generate visualizations.
+
+Together, DuckDB-WASM supplies fast in-browser SQL, vgplot turns query results
+into graphics, and Mosaic coordinates the layout and interactions among plots.
 
 ## Project structure
 
