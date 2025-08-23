@@ -9,9 +9,7 @@
     "observable": "observable"
   },
   "dependencies": {
-    "@duckdb/duckdb-wasm": "^1.29.1-dev132.0",
     "@observablehq/framework": "^1.13.3",
-    "@uwdata/vgplot": "^0.18.0",
     "d3-dsv": "^3.0.1",
     "d3-time-format": "^4.1.0"
   },
