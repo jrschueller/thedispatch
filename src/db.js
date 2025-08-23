@@ -1,4 +1,4 @@
-import duckdb from '@duckdb/duckdb-wasm';
+import * as duckdb from '@duckdb/duckdb-wasm';
 
 /**
  * Shared DuckDB-WASM instance with helper utilities.
