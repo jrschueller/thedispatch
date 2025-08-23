@@ -19,7 +19,9 @@ const chart = vg.plot({
   marks: [vg.barY(data, {x: "year", y: "y"})]
 });
 
-vg.hconcat(chart);
+const mosaic = new Mosaic();
+mosaic.add(vg.hconcat(chart));
+mosaic
 ```
 
 Data source: `src/data/events.csv`. The bar chart shows sample event values by year inside a Mosaic layout tile.
