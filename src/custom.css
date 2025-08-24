@@ -1,46 +1,47 @@
-/* Step 1: Import the default and theme CSS so your rules come after them */
 @import url("observablehq:default.css");
 @import url("observablehq:theme-cotton.css");
 
-/* Step 2: Override the layout-specific styles */
-
-/* Reset basic spacing */
-html, body {
+html, body, svg {
   margin: 0 !important;
   padding: 0 !important;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
 }
 
-/* Collapse container spacing */
-#observablehq-center,
-#observablehq-main {
+.plot-tooltip {
+  font-size: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Re-enable axis baselines if a theme hides them */
+svg.plot g[aria-label$="-axis"] path.domain {
+  display: initial;
+}
+
+#observablehq-center, #observablehq-main {
   margin: 0 !important;
   padding: 0 !important;
   min-height: 0 !important;
 }
 
-/* Hide the table of contents area */
 #observablehq-toc {
   display: none !important;
 }
 
-/* Reset block styles that may add padding or margin */
-.observablehq--block,
-.observablehq {
+.observablehq--block, .observablehq {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Neutralize any grid-based padding */
 #observablehq-center > * {
   padding-top: 0 !important;
 }
 
-/* Reset main wrapper internal padding */
 main {
   padding-top: 0 !important;
 }
 
-/* Remove heading spacing if still present */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0 !important;
   padding-top: 0 !important;
