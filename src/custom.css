@@ -1,40 +1,47 @@
-/* Import defaults first, then theme, then override */
+/* Step 1: Import the default and theme CSS so your rules come after them */
 @import url("observablehq:default.css");
-@import url("observablehq:theme-air.css"); /* or your theme */
+@import url("observablehq:theme-air.css");
 
-body, html {
+/* Step 2: Override the layout-specific styles */
+
+/* Reset basic spacing */
+html, body {
   margin: 0 !important;
   padding: 0 !important;
 }
 
+/* Collapse container spacing */
 #observablehq-center,
 #observablehq-main {
   margin: 0 !important;
   padding: 0 !important;
+  min-height: 0 !important;
 }
 
+/* Hide the table of contents area */
 #observablehq-toc {
   display: none !important;
 }
 
-.observablehq--block {
+/* Reset block styles that may add padding or margin */
+.observablehq--block,
+.observablehq {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* If titles/headings still add space: */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 !important;
-  padding: 0 !important;
+/* Neutralize any grid-based padding */
+#observablehq-center > * {
+  padding-top: 0 !important;
 }
 
-/* Remove any padding added by Framework layout wrappers */
+/* Reset main wrapper internal padding */
 main {
   padding-top: 0 !important;
 }
 
-/* Clear spacing from sections around your chart */
-section, div {
+/* Remove heading spacing if still present */
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }

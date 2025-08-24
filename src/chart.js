@@ -4,8 +4,10 @@ import { FileAttachment } from "observablehq:stdlib";
 export async function renderChart() {
   const data = await FileAttachment("./data/events.json").json();
   return Plot.plot({
+    width: 680,
+    height: 450,
     x: {nice: true, label: null, tickFormat: ""},
-    y: {axis: null},
+    y: {nice: true},
     marks: [
         Plot.ruleX(data, {x: "year", y: "y", markerEnd: "dot", strokeWidth: 2.5}),
         Plot.ruleY([0]),
