@@ -2,7 +2,7 @@ import * as Plot from "npm:@observablehq/plot";
 import { FileAttachment } from "observablehq:stdlib";
 
 export async function renderChart() {
-  const data = await FileAttachment("./data/events.json").json();
+  const data = await FileAttachment("../data/events.json").json();
   return Plot.plot({
     width,
     height,
