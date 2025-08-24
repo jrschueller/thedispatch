@@ -9,16 +9,19 @@ export async function renderChart() {
     width: 680,
     height: 420,
     x: {
-      label: "",
-      tickRotate: 0,
       axis: "bottom",
-      grid: false
+      label: "School year",
+      labelAnchor: "right",
+      //labelOffset: 30,
+      grid: false,
+      tickSize: 0
     },
     y: {
-      label: "Estimated coverage (%)",
       domain: [88.0, 100.0],
       axis: "left",
-      grid: true
+      label: "Estimated coverage (%)",
+      grid: true,
+      tickSize: 0
     },
     marks: [
       Plot.line(data, {
