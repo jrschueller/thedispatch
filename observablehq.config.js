@@ -22,7 +22,7 @@ export default {
   // The path to the source root.
   root: "src",
 
-  dynamicPaths: ["/chart.js"]
+  dynamicPaths: ["/components/chart.js"]
   // no additional page routing, sidebar, or layout
 
   // dynamicPaths: [
