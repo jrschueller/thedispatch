@@ -1,0 +1,40 @@
+/* Import defaults first, then theme, then override */
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css"); /* or your theme */
+
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#observablehq-center,
+#observablehq-main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#observablehq-toc {
+  display: none !important;
+}
+
+.observablehq--block {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* If titles/headings still add space: */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any padding added by Framework layout wrappers */
+main {
+  padding-top: 0 !important;
+}
+
+/* Clear spacing from sections around your chart */
+section, div {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}

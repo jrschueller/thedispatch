@@ -1,3 +1,7 @@
+---
+title: renderChart
+---
+
 ```js
 import {renderChart} from "./chart.js";
 const el = await renderChart();
