@@ -1,8 +1,5 @@
----
-title: Chart-only page
----
-
 ```js
-import {Chart} from "./chart.js";
-const el = await Chart();
+import {renderChart} from "./chart.js";
+const el = await renderChart();
 document.body.appendChild(el);
+```
