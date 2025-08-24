@@ -22,6 +22,9 @@ export default {
   // The path to the source root.
   root: "src",
 
+  dynamicPaths: ["/renderChart.js"]
+  // no additional page routing, sidebar, or layout
+
   // dynamicPaths: [
   //   "/@observablehq/framework/downloads-dark.svg",
   //   "/@observablehq/framework/downloads.svg",
