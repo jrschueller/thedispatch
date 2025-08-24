@@ -1,0 +1,11 @@
+vaccine_exemption,dose,geography_type,geography,school_year,estimate_pct,pop_size,pct_surveyed,footnotes,number_of_exceptions,survey_type
+MMR,,National,United States,2015-16,94.7,,,,,NaN
+MMR,,National,United States,2016-17,95,,,,,NaN
+MMR,,National,United States,2017-18,95,,,,,NaN
+MMR,,National,United States,2018-19,94.7,,,,,NaN
+MMR,,National,United States,2019-20,95.2,,,,,NaN
+MMR,,National,United States,2020-21,93.9,3510744,90.8,,,
+MMR,,National,United States,2021-22,93,3835130,92.2,,,
+MMR,,National,United States,2022-23,93.1,3832381,92.9,,,
+MMR,,National,United States,2023-24,92.7,3823506,93.1,,,
+MMR,,National,United States,2024-25,92.5,3785644,92.7,,,

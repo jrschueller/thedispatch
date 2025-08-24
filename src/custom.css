@@ -1,6 +1,6 @@
 /* Step 1: Import the default and theme CSS so your rules come after them */
 @import url("observablehq:default.css");
-@import url("observablehq:theme-air.css");
+@import url("observablehq:theme-cotton.css");
 
 /* Step 2: Override the layout-specific styles */
 

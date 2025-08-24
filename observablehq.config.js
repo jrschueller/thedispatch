@@ -5,10 +5,11 @@ export default {
   header: null,
   footer: null,
   pages: [],
-  theme: ["air"],  // or your chosen theme
+  theme: ["cotton"],  // or your chosen theme
   style: "custom.css",  // single style file to override defaults
   root: "src",
   dynamicPaths: [
+    "/vax_coverage.js",
     "/chart.js"
   ]
 };
