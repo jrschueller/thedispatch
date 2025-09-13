@@ -4,7 +4,7 @@ import * as protomapsL from "npm:protomaps-leaflet@3.1.1";
 
 export async function renderMap(display) {
 
-  const areas = await FileAttachment("data/cb_2018_us_zcta510_500k_nolimit.pmtiles");
+  const areas = await FileAttachment("data/cb_2018_us_zcta510_500k_nolimit.pmtiles.gz");
 
   const center = [38,-100];
   const zoom = 4;
