@@ -10,6 +10,8 @@ export default {
   root: "src",
   dynamicPaths: [
     "/vax_coverage.js",
+    "/map.js",
+    "/leaflet_map.js",
     "/chart.js"
   ]
 };
